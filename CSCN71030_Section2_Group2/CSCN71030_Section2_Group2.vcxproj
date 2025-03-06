@@ -127,7 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Dealer.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="Player.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Dealer.h" />
+    <ClInclude Include="Player.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
