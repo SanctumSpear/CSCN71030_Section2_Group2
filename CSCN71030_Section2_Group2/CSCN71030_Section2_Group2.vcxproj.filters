@@ -24,12 +24,24 @@
     <ClCompile Include="Player.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Card.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Deck.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Dealer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Card.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Deck.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
