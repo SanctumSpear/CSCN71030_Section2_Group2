@@ -33,7 +33,7 @@ CARD createCard(int value, int suit) {
 			strcpy_s(newCard.name, MAX_NAME_SIZE, "Eight");
 			break;
 		case 9:
-			strcpy_s(newCard.name, MAX_NAME_SIZE, "Nince");
+			strcpy_s(newCard.name, MAX_NAME_SIZE, "Nine");
 			break;
 		case 10:
 			strcpy_s(newCard.name, MAX_NAME_SIZE, "Ten");
@@ -75,4 +75,16 @@ CARD createCard(int value, int suit) {
 
 void printCard(CARD card) {
 	printf("%s", card.name);
+}
+
+int getValue(CARD card) {
+	return card.value;
+}
+
+int getSuit(CARD card) {
+	return card.suit;
+}
+
+char getName(CARD card) {
+	return card.name;
 }

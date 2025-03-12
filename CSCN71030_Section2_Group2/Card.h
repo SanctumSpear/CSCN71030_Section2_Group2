@@ -14,3 +14,9 @@ typedef struct card {
 CARD createCard(int value, int suit);
 
 void printCard(CARD card);
+
+int getValue(CARD card);
+
+int getSuit(CARD card);
+
+char getName(CARD card);
