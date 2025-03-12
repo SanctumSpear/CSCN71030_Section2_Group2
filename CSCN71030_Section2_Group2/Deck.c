@@ -24,18 +24,23 @@ CARD drawCard(DECK* deck) {
 	//generates a random position in the deck within the valid range defined by maxPosition
 	srand(time(0));
 	int pos = rand() % (deck->maxPosition + 1);
+
+	//assigns the card at the random position (the drawn card) to a new card variable
 	CARD card = createCard(deck->cards[pos].value, deck->cards[pos].suit);
 
+	//shifts all the cards after the drawn card to the left
 	for (int i = pos; i < INITIAL_MAX_POSTION; i++) {
 		deck->cards[pos] = deck->cards[pos + 1];
 	}
+	//assigns the drawn card to the last position in the deck
 	deck->cards[INITIAL_MAX_POSTION] = card;
 
-	if (deck->maxPosition == 0) {
-		deck->maxPosition = INITIAL_MAX_POSTION;
+	//decrements the maxPosition, reseting it back the initial value if it reaches 0
+	if (deck->maxPosition != 0) {
+		deck->maxPosition -= 1;
 	}
 	else {
-		deck->maxPosition -= 1;
+		deck->maxPosition = INITIAL_MAX_POSTION;
 	}
 
 	return card;
