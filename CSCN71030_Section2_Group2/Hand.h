@@ -12,5 +12,7 @@ void deal(DECK* deck);
 
 void draw(DECK* deck);
 
+void clearHand();
+
 void printHand();
 
