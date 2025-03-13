@@ -20,7 +20,7 @@ int main(void) {
 	char start[] = "Start";
 	do {
 		printf("Welcome to fortnite peter. To begin, type 'Start' \n");
-	} while ( scanf_s("%63s", begin, (unsigned int)sizeof(begin) ) != 1 || !strncmp(start, begin,6) );
+	} while (scanf_s("%63s", begin, (unsigned int)sizeof(begin)) != 1 || strcmp(start, begin) != 0);
 	printf("%s", begin);
 	
 }
