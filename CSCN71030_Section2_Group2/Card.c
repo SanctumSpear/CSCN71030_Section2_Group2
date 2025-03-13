@@ -8,8 +8,12 @@ CARD createCard(int value, int suit) {
 	newCard.suit = suit;
 
 	switch (value) {
+		case 0:
+			strcpy_s(newCard.name, MAX_NAME_SIZE, "Blank");
+			break;
 		case 1:
 			strcpy_s(newCard.name, MAX_NAME_SIZE, "Ace");
+			newCard.value = 11;
 			break;
 		case 2:
 			strcpy_s(newCard.name, MAX_NAME_SIZE, "Two");
@@ -40,12 +44,15 @@ CARD createCard(int value, int suit) {
 			break;
 		case 11:
 			strcpy_s(newCard.name, MAX_NAME_SIZE, "Jack");
+			newCard.value = 10;
 			break;
 		case 12:
 			strcpy_s(newCard.name, MAX_NAME_SIZE, "Queen");
+			newCard.value = 10;
 			break;
 		case 13:
 			strcpy_s(newCard.name, MAX_NAME_SIZE, "King");
+			newCard.value = 10;
 			break;
 		default:
 			strcpy_s(newCard.name, MAX_NAME_SIZE, "Invalid input");
@@ -53,6 +60,9 @@ CARD createCard(int value, int suit) {
 	}
 	strcat_s(newCard.name, MAX_NAME_SIZE, " of ");
 	switch (suit) {
+		case 0:
+			strcat_s(newCard.name, MAX_NAME_SIZE, "Blank");
+			break;
 		case 1:
 			strcat_s(newCard.name, MAX_NAME_SIZE, "Spades");
 			break;
