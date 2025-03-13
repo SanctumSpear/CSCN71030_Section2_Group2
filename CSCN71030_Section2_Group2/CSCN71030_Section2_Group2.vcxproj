@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Bet.c" />
     <ClCompile Include="Card.c" />
     <ClCompile Include="Dealer.c" />
     <ClCompile Include="Deck.c" />
@@ -135,6 +136,7 @@
     <ClCompile Include="Player.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Bet.h" />
     <ClInclude Include="Card.h" />
     <ClInclude Include="Dealer.h" />
     <ClInclude Include="Deck.h" />
