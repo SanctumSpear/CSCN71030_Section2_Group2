@@ -8,9 +8,9 @@
 
 CARD hand[HAND_ARRAY_LENGTH][HAND_ARRAY_HEIGHT];
 
-void deal(DECK* deck, CARD hand[HAND_ARRAY_LENGTH][HAND_ARRAY_HEIGHT]);
+void deal(DECK* deck);
 
-void draw(DECK* deck, CARD hand[HAND_ARRAY_LENGTH][HAND_ARRAY_HEIGHT]);
+void draw(DECK* deck);
 
-void printHand(CARD hand[HAND_ARRAY_LENGTH][HAND_ARRAY_HEIGHT]);
+void printHand();
 
