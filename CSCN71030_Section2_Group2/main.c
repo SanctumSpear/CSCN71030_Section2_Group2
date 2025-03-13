@@ -48,4 +48,7 @@ int main(void) {
 			printf("Invalid choice\n");
 		}
 	}
+	StartDealerTurn();
+
+	//do some scheisse from game state manager
 }
