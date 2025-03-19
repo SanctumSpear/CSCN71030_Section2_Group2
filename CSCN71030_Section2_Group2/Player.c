@@ -6,10 +6,10 @@
 
 bool firstPlayerTurn = true;
 
-void StartPlayerTurn(DECK mainDeck) {
+void StartPlayerTurn(DECK* mainDeck) {
 
 	if (firstPlayerTurn) {
-		deal(&mainDeck);
+		deal(mainDeck);
 		firstPlayerTurn = false;
 		printf("You have been dealt: ");
 		printHand();//fo player
@@ -23,8 +23,8 @@ void StartPlayerTurn(DECK mainDeck) {
 	
 }
 
-void PlayerHit(DECK mainDeck) {
-
+void PlayerHit(DECK* mainDeck) {
+	draw(mainDeck);
 }
 
 void EndPlayerTurn() {

@@ -30,7 +30,7 @@ int main(void) {
 
 		switch (choice) {
 		case 'h':
-			PlayerHit();
+			PlayerHit(mainDeck);
 			break;
 		case 's':
 			EndPlayerTurn();
