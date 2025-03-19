@@ -8,6 +8,8 @@
 #include "Dealer.h"
 
 int main(void) {
+	srand(time(NULL));
+
 	DECK mainDeck = createDeck();
 
 	char buffer[64] = "0";
@@ -16,7 +18,7 @@ int main(void) {
 		printf("Welcome to fortnite peter. To begin, type 'Start' \n");
 	} while (scanf_s("%63s", buffer, (unsigned int)sizeof(buffer)) != 1 || strcmp(start, buffer) != 0);
 	
-	StartPlayerTurn();
+	StartPlayerTurn(&mainDeck);
 	
 	char choice = 'n';
 	bool playerTurnActive = true;

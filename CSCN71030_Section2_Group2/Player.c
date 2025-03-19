@@ -4,18 +4,26 @@
 
 #include <stdbool.h>
 
-bool firstTurn = true;
+bool firstPlayerTurn = true;
 
-void StartPlayerTurn(DECK* mainDeck) {
+void StartPlayerTurn(DECK mainDeck) {
 
-	if (firstTurn) {
-		deal(mainDeck);
-		firstTurn = false;
+	if (firstPlayerTurn) {
+		deal(&mainDeck);
+		firstPlayerTurn = false;
+		printf("You have been dealt: ");
+		printHand();//fo player
+		printf("\n");
+
+
+		printf("The dealers first dealt card is: ");
+		printCard(hand[0][1]);
+		printf("\n\n");
 	}
 	
 }
 
-void PlayerHit() {
+void PlayerHit(DECK mainDeck) {
 
 }
 

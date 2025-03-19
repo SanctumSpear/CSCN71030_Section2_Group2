@@ -22,7 +22,6 @@ DECK createDeck() {
 
 CARD drawCard(DECK* deck) {
 	//generates a random position in the deck within the valid range defined by maxPosition
-	srand(time(0));
 	int pos = rand() % (deck->maxPosition + 1);
 
 	//assigns the card at the random position (the drawn card) to a new card variable
