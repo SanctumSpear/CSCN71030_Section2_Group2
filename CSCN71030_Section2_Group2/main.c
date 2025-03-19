@@ -8,6 +8,7 @@
 #include "Dealer.h"
 
 int main(void) {
+	DECK mainDeck = createDeck();
 
 	char buffer[64] = "0";
 	char start[] = "Start";
