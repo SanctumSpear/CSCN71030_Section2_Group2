@@ -9,6 +9,7 @@
 #include "Player.h"
 #include "Dealer.h"
 #include "Hand.h"
+#include "ResolvingGame.h"
 
 int main(void) {
 	srand(time(NULL));
@@ -26,7 +27,7 @@ int main(void) {
 	char choice = 'n';
 
 	printf("This is epic blackjack, type 'h' to Hit or type 's' to Stand \n");
-	while (IsPlayerTurnActive() && scanf_s(" %c", &choice, (unsigned int)sizeof(choice))) {
+	while (IsPlayerTurnActive() && scanf_s(" %c", &choice, (unsigned int)sizeof(choice)) && !overTwenty) {
 		switch (choice) {
 		case 'h':
 			PlayerHit(&mainDeck);
