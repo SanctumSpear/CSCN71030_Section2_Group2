@@ -52,5 +52,4 @@ int main(void) {
 	if (!IsDealerTurnActive() && !IsPlayerTurnActive()) {
 		endResult();
 	}
-	//do some scheisse from game state manager
 }
