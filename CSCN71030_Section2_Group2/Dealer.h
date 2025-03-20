@@ -1,9 +1,10 @@
 #pragma once
 #include <stdbool.h>
+#include "Deck.h"
 
 void StartDealerTurn();
 
-void DealerHit(DECK * mainDeck);
+void DealerHit(DECK* mainDeck);
 
 void EndDealerTurn();
 

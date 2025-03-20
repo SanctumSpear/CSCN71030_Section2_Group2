@@ -1,5 +1,6 @@
 #pragma once
 #include <stdbool.h>
+#include "Deck.h"
 
 void StartPlayerTurn(DECK* mainDeck);
 
