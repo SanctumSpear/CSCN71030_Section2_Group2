@@ -42,6 +42,7 @@ int addDealer() {
 	for (int i = 0; i < HAND_ARRAY_LENGTH; i++) {
 		value = value + hand[i][0].value;
 	}
+	return value;
 }
 
 int addPlayer() {
@@ -49,4 +50,5 @@ int addPlayer() {
 	for (int i = 0; i < HAND_ARRAY_LENGTH; i++) {
 		value = value + hand[i][1].value;
 	}
+	return value;
 }
