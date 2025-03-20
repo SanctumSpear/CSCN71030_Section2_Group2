@@ -17,8 +17,8 @@ void StartDealerTurn() {
 	}
 }
 
-void DealerHit() {
-	//draw for dealer
+void DealerHit(DECK* mainDeck) {
+	drawDealer(mainDeck);
 }
 
 void EndDealerTurn() {
