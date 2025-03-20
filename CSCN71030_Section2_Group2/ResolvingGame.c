@@ -17,7 +17,7 @@ int endResult() {
 	int dealerTotal = addDealer;
 	int playerTotal = addPlayer;
 
-	int endResult;  //1 = DRAW 2 = WIN 3 = LOSS
+	int endResult = 0;  //1 = DRAW 2 = WIN 3 = LOSS
 	if (dealerTotal > 21 && playerTotal > 21) {
 		fprint("DRAW");
 		endResult = 1;
