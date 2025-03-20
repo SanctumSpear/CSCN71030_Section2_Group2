@@ -11,9 +11,9 @@ void StartPlayerTurn(DECK* mainDeck) {
 	deal(mainDeck);
 	playerTurnActive = true;
 	printf("\nYou have been dealt a ");
-	printCard(hand[0][0]);
+	printCard(hand[0][1]);
 	printf(" and a ");
-	printCard(hand[1][0]);
+	printCard(hand[1][1]);
 	printf("\n");
 
 	printf("Your current hand value is %d\n\n", addPlayer());
