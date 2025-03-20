@@ -15,6 +15,7 @@ void StartDealerTurn(DECK* mainDeck) {
 		DealerHit(mainDeck);
 	}
 	printf("Done drawing\n");
+	EndDealerTurn();
 }
 
 void DealerHit(DECK* mainDeck) {

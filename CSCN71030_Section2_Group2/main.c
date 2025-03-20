@@ -47,7 +47,6 @@ int main(void) {
 
 	if (addPlayer() < 21) {
 		StartDealerTurn(&mainDeck);
-		endDealerTurn();
 	}
 	if (!IsDealerTurn() && !IsPlayerTurnActive())
 	endResult();
