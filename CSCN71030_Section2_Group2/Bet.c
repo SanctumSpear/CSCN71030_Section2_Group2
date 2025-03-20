@@ -36,7 +36,7 @@ int makeBet(int stock) {
 		printf("Make a bet: \n");
 
 		int bet;
-		scanf_s("%d\n", bet);
+		scanf_s("%d\n", &bet);
 
 		if (bet > stock) {
 			printf("Make sure bet is less than or equal to the amount of chips you have access to.\n");
