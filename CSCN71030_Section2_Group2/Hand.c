@@ -40,10 +40,13 @@ void printHand() {
 int addDealer() {
 	int value = 0;
 	for (int i = 0; i < HAND_ARRAY_LENGTH; i++) {
-
+		value = value + hand[i][0].value;
 	}
 }
 
 int addPlayer() {
-
+	int value = 0;
+	for (int i = 0; i < HAND_ARRAY_LENGTH; i++) {
+		value = value + hand[i][1].value;
+	}
 }
