@@ -156,6 +156,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\CSCN71030_Section2_Group2\Bet.c" />
+    <ClCompile Include="..\CSCN71030_Section2_Group2\Card.c" />
+    <ClCompile Include="..\CSCN71030_Section2_Group2\Dealer.c" />
+    <ClCompile Include="..\CSCN71030_Section2_Group2\Deck.c" />
+    <ClCompile Include="..\CSCN71030_Section2_Group2\Hand.c" />
+    <ClCompile Include="..\CSCN71030_Section2_Group2\Player.c" />
+    <ClCompile Include="..\CSCN71030_Section2_Group2\ResolvingGame.c" />
     <ClCompile Include="UnitTests.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

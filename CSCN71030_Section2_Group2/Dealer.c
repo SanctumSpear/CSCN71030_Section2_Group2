@@ -3,22 +3,23 @@
 
 #include <stdbool.h>
 
-bool firstDealerTurn = true;
-
 bool dealerTurnActive = false;
 
-void StartDealerTurn() {
-	if (firstDealerTurn) {
-		printf("The dealers second dealt card is: ");
-		printCard(hand[1][1]);
-		printf("\n\n");
-		firstDealerTurn = false;
-		dealerTurnActive = true;
+void StartDealerTurn(DECK* mainDeck) {
+	printf("The dealers second dealt card is: ");
+	printCard(hand[1][1]);
+	printf("\n\n");
+	dealerTurnActive = true;
+	while (addDealer < addPlayer && addDealer < 21) {
+		DealerHit(mainDeck);
 	}
 }
 
 void DealerHit(DECK* mainDeck) {
-	drawDealer(mainDeck);
+	CARD drawn = drawDealer(mainDeck);
+	printf("The dealer drew an: ");
+	printCard(drawn);
+	printf("\nHe now has a hand value of: %d\n", addDealer());
 }
 
 void EndDealerTurn() {

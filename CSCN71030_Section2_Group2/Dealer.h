@@ -2,7 +2,7 @@
 #include <stdbool.h>
 #include "Deck.h"
 
-void StartDealerTurn();
+void StartDealerTurn(DECK* mainDeck);
 
 void DealerHit(DECK* mainDeck);
 
