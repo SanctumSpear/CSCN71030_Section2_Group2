@@ -1,6 +1,7 @@
 #include "Player.h"
 #include "Deck.h"
 #include "Hand.h"
+#include "ResolvingGame.h"
 
 #include <stdbool.h>
 
