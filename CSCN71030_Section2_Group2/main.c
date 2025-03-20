@@ -27,7 +27,7 @@ int main(void) {
 	char choice = 'n';
 
 	printf("This is epic blackjack, type 'h' to Hit or type 's' to Stand \n");
-	while (IsPlayerTurnActive() && scanf_s(" %c", &choice, (unsigned int)sizeof(choice)) && !overTwenty) {
+	while (IsPlayerTurnActive() && scanf_s(" %c", &choice, (unsigned int)sizeof(choice))) {
 		switch (choice) {
 		case 'h':
 			PlayerHit(&mainDeck);
@@ -37,11 +37,19 @@ int main(void) {
 			break;
 		default:
 			printf("Invalid choice\n");
-		}
+		} 
 		printf("The dealer has: %d\n", addDealer());
 		printf("You have: %d\n", addPlayer());
+		if (overTwenty()) {
+			EndPlayerTurn();
+		}
 	}
-	StartDealerTurn(&mainDeck);
+
+	if (addPlayer() < 21) {
+		StartDealerTurn(&mainDeck);
+	}
+
+	endResult();
 
 	//do some scheisse from game state manager
 }
