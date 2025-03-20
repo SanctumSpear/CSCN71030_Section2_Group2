@@ -6,12 +6,12 @@
 #include <stdbool.h>
 
 bool overTwenty() {
-	int dealerTotal = addDealer;
-	int playerTotal = addPlayer;
+	int dealerTotal = addDealer();
+	int playerTotal = addPlayer();
 	if (dealerTotal > 21 || playerTotal > 21) {
 		endResult();
 	}
-	return 0;
+	return true;
 }
 
 int endResult() {
