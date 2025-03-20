@@ -8,6 +8,7 @@
 #include "Deck.h"
 #include "Player.h"
 #include "Dealer.h"
+#include "Hand.h"
 
 int main(void) {
 	srand(time(NULL));
@@ -26,12 +27,13 @@ int main(void) {
 
 	printf("This is epic blackjack, type 'h' to Hit or type 's' to Stand \n");
 	while (IsPlayerTurnActive() && scanf_s(" %c", &choice, (unsigned int)sizeof(choice))) {
-		printf("The dealer has: \n"); //TODO: print the dealer's hand (each card) and the total value, but only the first card
+		printf("The dealer has: ");
+		addDealer();
 		printf("You have: \n"); //TODO: print the player's hand (each card) and the total value	
 
 		switch (choice) {
 		case 'h':
-			PlayerHit(mainDeck);
+			PlayerHit(&mainDeck);
 			break;
 		case 's':
 			EndPlayerTurn();

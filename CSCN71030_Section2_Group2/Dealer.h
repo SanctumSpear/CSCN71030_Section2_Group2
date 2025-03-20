@@ -1,9 +1,10 @@
 #pragma once
 #include <stdbool.h>
+
 void StartDealerTurn();
 
-void DealerHit();
+void DealerHit(DECK * mainDeck);
 
 void EndDealerTurn();
 
-bool isDealerTurnActive();
+bool IsDealerTurn();

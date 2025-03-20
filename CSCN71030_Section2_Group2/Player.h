@@ -1,9 +1,9 @@
 #pragma once
 #include <stdbool.h>
 
-void StartPlayerTurn();
+void StartPlayerTurn(DECK* mainDeck);
 
-void PlayerHit();
+void PlayerHit(DECK* mainDeck);
 
 void EndPlayerTurn();
 
