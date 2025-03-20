@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
+#include <stdlib.h>
+#include <time.h>
 
 #include "Card.h"
 #include "Deck.h"
@@ -21,10 +23,9 @@ int main(void) {
 	StartPlayerTurn(&mainDeck);
 	
 	char choice = 'n';
-	bool playerTurnActive = true;
 
 	printf("This is epic blackjack, type 'h' to Hit or type 's' to Stand \n");
-	while (playerTurnActive && scanf_s(" %c", &choice, (unsigned int)sizeof(choice))) {
+	while (IsPlayerTurnActive() && scanf_s(" %c", &choice, (unsigned int)sizeof(choice))) {
 		printf("The dealer has: \n"); //TODO: print the dealer's hand (each card) and the total value, but only the first card
 		printf("You have: \n"); //TODO: print the player's hand (each card) and the total value	
 
@@ -34,7 +35,6 @@ int main(void) {
 			break;
 		case 's':
 			EndPlayerTurn();
-			playerTurnActive = false;
 			break;
 		default:
 			printf("Invalid choice\n");

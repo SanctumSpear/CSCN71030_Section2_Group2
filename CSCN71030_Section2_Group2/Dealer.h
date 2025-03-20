@@ -5,3 +5,5 @@ void StartDealerTurn();
 void DealerHit();
 
 void EndDealerTurn();
+
+bool isDealerTurnActive();

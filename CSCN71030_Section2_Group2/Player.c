@@ -6,11 +6,14 @@
 
 bool firstPlayerTurn = true;
 
+bool playerTurnActive = false;
+
 void StartPlayerTurn(DECK* mainDeck) {
 
 	if (firstPlayerTurn) {
 		deal(mainDeck);
 		firstPlayerTurn = false;
+		playerTurnActive = true;
 		printf("You have been dealt: ");
 		printHand();//fo player
 		printf("\n");
@@ -28,5 +31,9 @@ void PlayerHit(DECK* mainDeck) {
 }
 
 void EndPlayerTurn() {
+	playerTurnActive = false;
+}
 
+bool IsPlayerTurnActive() {
+	return playerTurnActive;
 }
