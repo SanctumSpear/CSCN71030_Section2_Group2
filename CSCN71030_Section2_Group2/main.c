@@ -18,7 +18,8 @@ int main(void) {
 	char buffer[64] = "0";
 	char start[] = "Start";
 	do {
-		printf("Welcome to fortnite peter. To begin, type 'Start' \n");
+		printf("Welcome to fortnite peter.\n To begin, type 'Start' \n");
+		
 	} while (scanf_s("%63s", buffer, (unsigned int)sizeof(buffer)) != 1 || strcmp(start, buffer) != 0);
 	
 	StartPlayerTurn(&mainDeck);
