@@ -9,7 +9,6 @@ bool overTwenty() {
 	int dealerTotal = addDealer();
 	int playerTotal = addPlayer();
 	if (dealerTotal > 21 || playerTotal > 21) {
-		endResult();
 		return true;
 	}
 	return false;
