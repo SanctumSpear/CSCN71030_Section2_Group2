@@ -16,7 +16,10 @@ void StartDealerTurn(DECK* mainDeck) {
 }
 
 void DealerHit(DECK* mainDeck) {
-	drawDealer(mainDeck);
+	CARD drawn = drawDealer(mainDeck);
+	printf("The dealer drew an: ");
+	printCard(drawn);
+	printf("\nHe now has a hand value of: %d\n", addDealer());
 }
 
 void EndDealerTurn() {
