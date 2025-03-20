@@ -20,27 +20,27 @@ int endResult() {
 
 	int endResult = 0;  //1 = DRAW 2 = WIN 3 = LOSS
 	if (dealerTotal > 21 && playerTotal > 21) {
-		fprint("DRAW");
+		printf("DRAW");
 		endResult = 1;
 	}
 	if (dealerTotal == playerTotal) {
-		fprint("DRAW");
+		printf("DRAW");
 		endResult = 1;
 	}
 	if (dealerTotal < 21 && playerTotal < 21 && dealerTotal <= playerTotal) {
-		fprint("WIN");
+		printf("WIN");
 		endResult = 2;
 	}
 	if (dealerTotal > 21 && playerTotal < 21) {
-		fprint("WIN");
+		printf("WIN");
 		endResult = 2;
 	}
 	if (dealerTotal < 21 && playerTotal < 21 && dealerTotal >= playerTotal) {
-		fprint("LOSS");
+		printf("LOSS");
 		endResult = 3;
 	}
 	if (dealerTotal < 21 && playerTotal > 21) {
-		fprint("LOSS");
+		printf("LOSS");
 		endResult = 3;
 	}
 	return endResult;
