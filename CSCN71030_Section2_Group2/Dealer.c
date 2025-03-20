@@ -9,6 +9,7 @@ void StartDealerTurn(DECK* mainDeck) {
 	printf("The dealers second dealt card is: ");
 	printCard(hand[1][1]);
 	printf("\n\n");
+	printf("He now has a hand value of %d\n", addDealer());
 	dealerTurnActive = true;
 	while (addDealer < addPlayer && addDealer < 21) {
 		DealerHit(mainDeck);

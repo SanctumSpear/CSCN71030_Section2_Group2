@@ -2,6 +2,7 @@
 #include "Deck.h"
 #include "Hand.h"
 
+
 #include <stdbool.h>
 
 bool playerTurnActive = false;
@@ -9,9 +10,13 @@ bool playerTurnActive = false;
 void StartPlayerTurn(DECK* mainDeck) {
 	deal(mainDeck);
 	playerTurnActive = true;
-	printf("You have been dealt: ");
-	printHand();//fo player
+	printf("\nYou have been dealt a ");
+	printCard(hand[0][0]);
+	printf(" and a ");
+	printCard(hand[1][0]);
 	printf("\n");
+
+	printf("Your current hand value is %d\n\n", addPlayer());
 
 	printf("The dealers first dealt card is: ");
 	printCard(hand[0][1]);
@@ -19,7 +24,10 @@ void StartPlayerTurn(DECK* mainDeck) {
 }
 
 void PlayerHit(DECK* mainDeck) {
-	drawPlayer(mainDeck);
+	CARD drawn = drawPlayer(mainDeck);
+	printf("You drew a ");
+	printCard(drawn);
+	printf("\n");
 }
 
 void EndPlayerTurn() {

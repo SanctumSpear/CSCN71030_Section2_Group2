@@ -27,10 +27,6 @@ int main(void) {
 
 	printf("This is epic blackjack, type 'h' to Hit or type 's' to Stand \n");
 	while (IsPlayerTurnActive() && scanf_s(" %c", &choice, (unsigned int)sizeof(choice))) {
-
-		printf("The dealer has: %d\n", addDealer());
-		printf("You have: %d\n", addPlayer());
-
 		switch (choice) {
 		case 'h':
 			PlayerHit(&mainDeck);
@@ -41,6 +37,8 @@ int main(void) {
 		default:
 			printf("Invalid choice\n");
 		}
+		printf("The dealer has: %d\n", addDealer());
+		printf("You have: %d\n", addPlayer());
 	}
 	StartDealerTurn(&mainDeck);
 
