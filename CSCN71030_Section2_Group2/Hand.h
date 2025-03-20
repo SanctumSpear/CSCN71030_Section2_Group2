@@ -10,9 +10,14 @@ CARD hand[HAND_ARRAY_LENGTH][HAND_ARRAY_HEIGHT];
 
 void deal(DECK* deck);
 
-void draw(DECK* deck);
+void drawPlayer(DECK* deck);
+
+void drawDealer(DECK* deck);
 
 void clearHand();
 
 void printHand();
 
+int addDealer();
+
+int addPlayer();
