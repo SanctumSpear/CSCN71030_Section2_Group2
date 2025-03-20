@@ -9,15 +9,14 @@ bool overTwenty() {
 	int dealerTotal = addDealer();
 	int playerTotal = addPlayer();
 	if (dealerTotal > 21 || playerTotal > 21) {
-		endResult();
-return true;
+		return true;
 	}
 	return false;
 }
 
 int endResult() {
-	int dealerTotal = addDealer;
-	int playerTotal = addPlayer;
+	int dealerTotal = addDealer();
+	int playerTotal = addPlayer();
 
 	int endResult = 0;  //1 = DRAW 2 = WIN 3 = LOSS
 	if (dealerTotal > 21 && playerTotal > 21) {
