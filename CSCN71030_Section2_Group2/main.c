@@ -48,8 +48,9 @@ int main(void) {
 	if (addPlayer() < 21) {
 		StartDealerTurn(&mainDeck);
 	}
-	if (!IsDealerTurn() && !IsPlayerTurnActive())
-	endResult();
 
+	if (!IsDealerTurnActive() && !IsPlayerTurnActive()) {
+		endResult();
+	}
 	//do some scheisse from game state manager
 }

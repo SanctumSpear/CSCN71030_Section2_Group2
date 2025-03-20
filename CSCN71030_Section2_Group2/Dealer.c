@@ -29,6 +29,6 @@ void EndDealerTurn() {
 	dealerTurnActive = false;
 }
 
-bool IsDealerTurn() {
+bool IsDealerTurnActive() {
 	return dealerTurnActive;
 }

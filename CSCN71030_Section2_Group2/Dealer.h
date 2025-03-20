@@ -8,4 +8,4 @@ void DealerHit(DECK* mainDeck);
 
 void EndDealerTurn();
 
-bool IsDealerTurn();
+bool IsDealerTurnActive();
