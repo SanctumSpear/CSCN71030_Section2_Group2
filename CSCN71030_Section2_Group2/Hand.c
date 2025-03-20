@@ -15,6 +15,7 @@ CARD drawPlayer(DECK* deck) {
 			return hand[i][1];
 		}
 	}
+	return blank;
 }
 
 CARD drawDealer(DECK* deck) {
@@ -25,6 +26,7 @@ CARD drawDealer(DECK* deck) {
 			return hand[i][0];
 		}
 	}
+	return blank;
 }
 
 void clearHand() {
