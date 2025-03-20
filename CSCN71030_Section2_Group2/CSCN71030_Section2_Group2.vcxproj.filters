@@ -30,6 +30,15 @@
     <ClCompile Include="Deck.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Bet.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Hand.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ResolvingGame.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Dealer.h">
@@ -42,6 +51,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Deck.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Bet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Hand.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

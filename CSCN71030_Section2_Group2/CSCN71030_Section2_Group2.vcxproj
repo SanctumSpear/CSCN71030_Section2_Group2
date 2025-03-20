@@ -134,6 +134,7 @@
     <ClCompile Include="Hand.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="Player.c" />
+    <ClCompile Include="ResolvingGame.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bet.h" />
