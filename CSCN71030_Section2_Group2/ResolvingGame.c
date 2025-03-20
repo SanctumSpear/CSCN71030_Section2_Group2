@@ -20,6 +20,15 @@ bool overTwenty() {
 }
 
 int endResult() {
+	int dealerTotal = hand[0][1]; 
+	for (int i = 0; i = 21; i++) { 
+		dealerTotal = dealerTotal + hand[i][1];
+	}
+	int playerTotal = hand[0][0]; 
+	for (int i = 0; i = 21; i++) {
+		dealerTotal = playerTotal + hand[i][0];
+	}
+
 	int endResult;  //1 = DRAW 2 = WIN 3 = LOSS
 	if (dealerTotal > 21 && playerTotal > 21) {
 		fprint("DRAW");
