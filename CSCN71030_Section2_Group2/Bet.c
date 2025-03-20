@@ -22,6 +22,12 @@ int readChipsFile(char* filename) {
 		exit(EXIT_FAILURE);
 	}
 
+	int stock;
+
+	fscanf_s(dataFile, "%d", &stock);
+	fclose(dataFile);
+
+	return stock;
 }
 
 int makeBet(int stock) {
