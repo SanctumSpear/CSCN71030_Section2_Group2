@@ -10,9 +10,9 @@ CARD hand[HAND_ARRAY_LENGTH][HAND_ARRAY_HEIGHT];
 
 void deal(DECK* deck);
 
-void drawPlayer(DECK* deck);
+CARD drawPlayer(DECK* deck);
 
-void drawDealer(DECK* deck);
+CARD drawDealer(DECK* deck);
 
 void clearHand();
 
