@@ -7,11 +7,20 @@ void deal(DECK* deck) {
 	hand[1][0] = drawCard(deck);
 }
 
-void draw(DECK* deck) {
+void drawPlayer(DECK* deck) {
 	CARD blank = createCard(0, 0);
 	for (int i = 0; i < HAND_ARRAY_LENGTH; i++) {
 		if (hand[i][1].value == blank.value) {
 			hand[i][1] = drawCard(deck);
+		}
+	}
+}
+
+void drawDealer(DECK* deck) {
+	CARD blank = createCard(0, 0);
+	for (int i = 0; i < HAND_ARRAY_LENGTH; i++) {
+		if (hand[i][0].value == blank.value) {
+			hand[i][0] = drawCard(deck);
 		}
 	}
 }
@@ -25,5 +34,16 @@ void clearHand() {
 }
 
 void printHand() {
+
+}
+
+int addDealer() {
+	int value = 0;
+	for (int i = 0; i < HAND_ARRAY_LENGTH; i++) {
+
+	}
+}
+
+int addPlayer() {
 
 }
