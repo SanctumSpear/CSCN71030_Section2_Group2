@@ -10,6 +10,7 @@
 #include "Dealer.h"
 #include "Hand.h"
 #include "Bet.h"
+#include "ResolvingGame.h"
 
 int main(void) {
 	srand(time(NULL));
@@ -41,11 +42,19 @@ int main(void) {
 			break;
 		default:
 			printf("Invalid choice\n");
-		}
+		} 
 		printf("The dealer has: %d\n", addDealer());
 		printf("You have: %d\n", addPlayer());
+		if (overTwenty()) {
+			EndPlayerTurn();
+		}
 	}
-	StartDealerTurn(&mainDeck);
 
-	//do some scheisse from game state manager
+	if (addPlayer() < 21) {
+		StartDealerTurn(&mainDeck);
+	}
+
+	if (!IsDealerTurnActive() && !IsPlayerTurnActive()) {
+		endResult();
+	}
 }

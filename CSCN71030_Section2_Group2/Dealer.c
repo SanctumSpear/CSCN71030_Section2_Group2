@@ -1,19 +1,21 @@
 #include "Dealer.h"
 #include "Hand.h"
-
+#include "ResolvingGame.h"
 #include <stdbool.h>
 
 bool dealerTurnActive = false;
 
 void StartDealerTurn(DECK* mainDeck) {
-	printf("The dealers second dealt card is: ");
+	printf("\nThe dealers second dealt card is: ");
 	printCard(hand[1][1]);
-	printf("\n\n");
+	printf("\n");
 	printf("He now has a hand value of %d\n", addDealer());
 	dealerTurnActive = true;
-	while (addDealer < addPlayer && addDealer < 21) {
+	while (addDealer() < addPlayer() && addDealer() < 21) {
 		DealerHit(mainDeck);
 	}
+	printf("Done drawing\n");
+	EndDealerTurn();
 }
 
 void DealerHit(DECK* mainDeck) {
@@ -27,6 +29,6 @@ void EndDealerTurn() {
 	dealerTurnActive = false;
 }
 
-bool IsDealerTurn() {
+bool IsDealerTurnActive() {
 	return dealerTurnActive;
 }
