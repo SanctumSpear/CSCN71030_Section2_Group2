@@ -37,4 +37,15 @@ namespace UnitTests
 		
 		}
 	};
+
+	TEST_CLASS(HandTests) {
+	public:
+
+		TEST_METHOD(HandTest_DrawToPlayer) {
+			DECK deck = createDeck();
+			CARD c01 = drawPlayer(&deck);
+			CARD c02 = hand[0][1];
+			Assert::AreEqual(c01, c02);
+		}
+	};
 }
