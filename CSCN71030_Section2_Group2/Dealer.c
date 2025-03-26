@@ -15,6 +15,7 @@ void StartDealerTurn(DECK* mainDeck) {
 		DealerHit(mainDeck);
 	}
 	printf("Done drawing\n");
+	EndDealerTurn();
 }
 
 void DealerHit(DECK* mainDeck) {
@@ -28,6 +29,6 @@ void EndDealerTurn() {
 	dealerTurnActive = false;
 }
 
-bool IsDealerTurn() {
+bool IsDealerTurnActive() {
 	return dealerTurnActive;
 }

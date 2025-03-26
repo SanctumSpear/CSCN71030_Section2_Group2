@@ -50,7 +50,7 @@ int main(void) {
 		StartDealerTurn(&mainDeck);
 	}
 
-	endResult();
-
-	//do some scheisse from game state manager
+	if (!IsDealerTurnActive() && !IsPlayerTurnActive()) {
+		endResult();
+	}
 }
