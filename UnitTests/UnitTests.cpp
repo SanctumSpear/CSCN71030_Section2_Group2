@@ -78,5 +78,23 @@ namespace UnitTests
 			int total = addPlayer();
 			Assert::AreEqual(realTotal, total);
 		}
+
+		TEST_METHOD(HandTest_BeginningDeal) {
+			DECK deck = createDeck();
+			deal(&deck);
+			Assert::IsNotNull(&hand[0][0].value);
+			Assert::IsNotNull(&hand[1][0].value);
+			Assert::IsNotNull(&hand[0][1].value);
+			Assert::IsNotNull(&hand[1][1].value);
+		}
+
+		TEST_METHOD(HandTest_ClearHand) {
+			CARD blank = createCard(0, 0);
+			hand[2][0] = createCard(8, 2);
+			hand[1][1] = createCard(13, 1);
+			clearHand();
+			Assert::AreEqual(hand[2][0], blank);
+			Assert::AreEqual(hand[1][1], blank);
+		}
 	};
 }
