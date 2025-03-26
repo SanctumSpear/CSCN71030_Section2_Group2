@@ -6,12 +6,10 @@ DECK createDeck() {
 	DECK newDeck;
 	newDeck.maxPosition = INITIAL_MAX_POSTION;
 
-	//used to keep track of the position in the deck
 	int count = 0;
 	//loops through each value for each suit
 	for (int i = 1; i <= 4; i++) {
 		for (int j = 1; j <= 13; j++) {
-			//creats a card with the current value and suit
 			newDeck.cards[count] = createCard(j, i);
 			count++;
 		}

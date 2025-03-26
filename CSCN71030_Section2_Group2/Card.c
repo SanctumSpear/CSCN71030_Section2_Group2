@@ -13,7 +13,6 @@ CARD createCard(int value, int suit) {
 			break;
 		case 1:
 			strcpy_s(newCard.name, MAX_NAME_SIZE, "Ace");
-			newCard.value = 11;
 			break;
 		case 2:
 			strcpy_s(newCard.name, MAX_NAME_SIZE, "Two");
@@ -55,7 +54,7 @@ CARD createCard(int value, int suit) {
 			newCard.value = 10;
 			break;
 		default:
-			strcpy_s(newCard.name, MAX_NAME_SIZE, "Invalid input");
+			strcpy_s(newCard.name, MAX_NAME_SIZE, "Invalid Input");
 			break;
 	}
 	strcat_s(newCard.name, MAX_NAME_SIZE, " of ");
@@ -76,7 +75,7 @@ CARD createCard(int value, int suit) {
 			strcat_s(newCard.name, MAX_NAME_SIZE, "Diamonds");
 			break;
 		default:
-			strcat_s(newCard.name, MAX_NAME_SIZE, "invalid");
+			strcat_s(newCard.name, MAX_NAME_SIZE, "Invalid Input");
 			break;
 	}
 	
