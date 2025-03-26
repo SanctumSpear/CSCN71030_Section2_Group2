@@ -47,5 +47,36 @@ namespace UnitTests
 			CARD c02 = hand[0][1];
 			Assert::AreEqual(c01, c02);
 		}
+
+		TEST_METHOD(HandTest_DrawToDealer) {
+			DECK deck = createDeck();
+			CARD c01 = drawDealer(&deck);
+			CARD c02 = hand[0][0];
+			Assert::AreEqual(c01, c02);
+		}
+
+		TEST_METHOD(HandTest_AddPlayerHand) {
+			CARD c01 = createCard(4, 2);
+			CARD c02 = createCard(1, 4);
+			CARD c03 = createCard(9, 1);
+			hand[0][1] = c01;
+			hand[1][1] = c02;
+			hand[2][1] = c03;
+			int realTotal = 24;
+			int total = addPlayer();
+			Assert::AreEqual(realTotal, total);
+		}
+
+		TEST_METHOD(HandTest_AddDealerHand) {
+			CARD c01 = createCard(2, 2);
+			CARD c02 = createCard(12, 4);
+			CARD c03 = createCard(10, 1);
+			hand[0][0] = c01;
+			hand[1][0] = c02;
+			hand[2][0] = c03;
+			int realTotal = 22;
+			int total = addPlayer();
+			Assert::AreEqual(realTotal, total);
+		}
 	};
 }
