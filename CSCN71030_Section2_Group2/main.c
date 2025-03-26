@@ -9,6 +9,7 @@
 #include "Player.h"
 #include "Dealer.h"
 #include "Hand.h"
+#include "Bet.h"
 
 int main(void) {
 	srand(time(NULL));
@@ -20,6 +21,10 @@ int main(void) {
 	do {
 		printf("Welcome to fortnite peter. To begin, type 'Start' \n");
 	} while (scanf_s("%63s", buffer, (unsigned int)sizeof(buffer)) != 1 || strcmp(start, buffer) != 0);
+
+	char* filename = "chips.txt";
+	int stock = readChipsFile(filename);
+	printf("Chips: %d\n", stock);
 	
 	StartPlayerTurn(&mainDeck);
 	
