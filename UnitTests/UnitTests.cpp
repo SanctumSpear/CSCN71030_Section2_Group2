@@ -210,11 +210,11 @@ namespace UnitTests
 		TEST_METHOD(HandTest_AddPlayerHand) {
 			CARD c01 = createCard(4, 2);
 			CARD c02 = createCard(1, 4);
-			CARD c03 = createCard(9, 1);
+			CARD c03 = createCard(5, 1);
 			hand[0][1] = c01;
 			hand[1][1] = c02;
 			hand[2][1] = c03;
-			int realTotal = 24;
+			int realTotal = 20;
 			int total = addPlayer();
 			Assert::AreEqual(realTotal, total);
 		}
@@ -222,11 +222,11 @@ namespace UnitTests
 		TEST_METHOD(HandTest_AddDealerHand) {
 			CARD c01 = createCard(2, 2);
 			CARD c02 = createCard(12, 4);
-			CARD c03 = createCard(10, 1);
+			CARD c03 = createCard(8, 1);
 			hand[0][0] = c01;
 			hand[1][0] = c02;
 			hand[2][0] = c03;
-			int realTotal = 22;
+			int realTotal = 20;
 			int total = addPlayer();
 			Assert::AreEqual(realTotal, total);
 		}
