@@ -60,7 +60,7 @@ int main(void) {
 		default:
 			printf("Invalid choice\n");
 		} 
-		printf("The dealer has: %d\n", addDealer());
+		printf("The dealer has: %d\n", hand[0][1].value);
 		printf("You have: %d\n", addPlayer());
 		if (overTwenty()) {
 			EndPlayerTurn();
