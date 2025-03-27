@@ -227,7 +227,7 @@ namespace UnitTests
 			hand[1][0] = c02;
 			hand[2][0] = c03;
 			int realTotal = 20;
-			int total = addPlayer();
+			int total = addDealer();
 			Assert::AreEqual(realTotal, total);
 		}
 

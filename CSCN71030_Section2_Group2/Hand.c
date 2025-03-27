@@ -31,7 +31,7 @@ CARD drawDealer(DECK* deck) {
 
 void clearHand() {
 	for (int i = 0; i < HAND_ARRAY_HEIGHT; i++) {
-		for (int j = 0; i < HAND_ARRAY_LENGTH; j++) {
+		for (int j = 0; j < HAND_ARRAY_LENGTH; j++) {
 			hand[j][i] = createCard(0, 0);
 		}
 	}
