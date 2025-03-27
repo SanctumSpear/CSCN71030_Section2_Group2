@@ -68,7 +68,7 @@ int main(void) {
 			}
 			printf("The dealer has: %d\n", hand[0][1].value);
 			printf("You have: %d\n", addPlayer());
-			if (overTwenty()) {
+			if (overTwenty(addDealer(), addPlayer())) {
 				EndPlayerTurn();
 			}
 		}
@@ -78,7 +78,7 @@ int main(void) {
 		}
 
 		if (!IsDealerTurnActive() && !IsPlayerTurnActive()) {
-			endResult();
+			endResult(addDealer(),addPlayer());
 		}
 		printf("Enter any key to keep playing, or enter 'x' to exit");
 		scanf_s(" %c", &playChoice, (unsigned int)sizeof(playChoice));
