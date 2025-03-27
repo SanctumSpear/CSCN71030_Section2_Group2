@@ -39,6 +39,22 @@ int main(void) {
 			int bet;
 			scanf_s("%d", &bet);
 
+		if (bet <= stock) {
+			printf("You bet %d chips\n", bet);
+			loopBet = false;
+		}
+		else if (bet < 0) {
+			printf("Please enter a positive integer.\n");
+		}
+		else {
+			printf("Please enter a bet that is lower than the amount of chips you have access to.\n");
+		}
+	}
+	
+	
+	StartPlayerTurn(&mainDeck);
+	
+	char choice = 'n';
 			if (bet <= stock) {
 				loopBet = false;
 			} else if (bet < 0) {
