@@ -11,7 +11,7 @@ void StartDealerTurn(DECK* mainDeck) {
 	printf("\n");
 	printf("He now has a hand value of %d\n", addDealer());
 	dealerTurnActive = true;
-	while (addDealer() < addPlayer() && addDealer() < 21) {
+	while (addDealer() < addPlayer() && addDealer() <= 21) {
 		DealerHit(mainDeck);
 	}
 	printf("Done drawing\n");

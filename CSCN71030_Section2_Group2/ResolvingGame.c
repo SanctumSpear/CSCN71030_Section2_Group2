@@ -5,18 +5,16 @@
 
 #include <stdbool.h>
 
-bool overTwenty() {
-	int dealerTotal = addDealer();
-	int playerTotal = addPlayer();
-	if (dealerTotal > 21 || playerTotal > 21) {
+bool overTwenty(int valueDealer, int valuePlayer) {
+	if (valueDealer > 21 || valuePlayer >= 21) {
 		return true;
 	}
 	return false;
 }
 
-int endResult() {
-	int dealerTotal = addDealer();
-	int playerTotal = addPlayer();
+int endResult(int valueDealer, int valuePlayer) {
+	int dealerTotal = valueDealer;
+	int playerTotal = valuePlayer;
 
 	int endResult = 0;  //1 = DRAW 2 = WIN 3 = LOSS
 	if (dealerTotal > 21 && playerTotal > 21) {
