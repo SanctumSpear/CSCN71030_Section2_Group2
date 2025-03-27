@@ -6,7 +6,7 @@
 #include <stdbool.h>
 
 bool overTwenty(int valueDealer, int valuePlayer) {
-	if (valueDealer > 21 || valuePlayer > 21) {
+	if (valueDealer > 21 || valuePlayer >= 21) {
 		return true;
 	}
 	return false;
