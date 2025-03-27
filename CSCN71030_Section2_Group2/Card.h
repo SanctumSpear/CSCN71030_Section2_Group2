@@ -8,6 +8,9 @@ typedef struct card {
 	//2 - club
 	//3 - heart
 	//4 - diamond
+	int aceCheck = 0;
+	//0 = low ace
+	//1 = high ace
 	char name[MAX_NAME_SIZE];
 } CARD;
 

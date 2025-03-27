@@ -44,15 +44,47 @@ void printHand() {
 int addDealer() {
 	int valueDealer = 0;
 	for (int i = 0; i < HAND_ARRAY_LENGTH; i++) {
-		valueDealer = valueDealer + hand[i][0].value;
+		if (hand[i][0].value == 11 || hand[i][0].value == 12 || hand[i][0].value == 13) {
+			value = value + 10;
+		}
+		else {
+			value = value + hand[i][0].value;
+		}
 	}
-	return valueDealer;
+
+	for (int i = 0; i < HAND_ARRAY_LENGTH; i++) {
+		if (hand[i][0].value == 1 && hand[i][0].aceCheck == 0 && value + 10 <= 21) {
+			hand[i][0].aceCheck = 1;
+			value = value + 10;
+		}
+		if (hand[i][0].value == 1 && hand[i][0].aceCheck == 1 && value > 21) {
+			hand[i][0].aceCheck = 0;
+			value = value - 10;
+		}
+	}
+	return value;
 }
 
 int addPlayer() {
-	int valuePlayer = 0;
+	int value = 0;
 	for (int i = 0; i < HAND_ARRAY_LENGTH; i++) {
-		valuePlayer = valuePlayer + hand[i][1].value;
+		if (hand[i][1].value == 11 || hand[i][1].value == 12 || hand[i][1].value == 13){
+			value = value + 10;
+		}
+		else {
+			value = value + hand[i][1].value;
+		}
 	}
-	return valuePlayer;
+
+	for (int i = 0; i < HAND_ARRAY_LENGTH; i++) {
+		if (hand[i][1].value == 1 && hand[i][1].aceCheck == 0 && value + 10 <= 21) {
+			hand[i][1].aceCheck = 1;
+			value = value + 10;
+		}
+		if (hand[i][1].value == 1 && hand[i][1].aceCheck == 1 && value > 21) {
+			hand[i][1].aceCheck = 0;
+			value = value - 10;
+		}
+	}
+	return value;
 }
