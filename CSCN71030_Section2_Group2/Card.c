@@ -6,6 +6,7 @@ CARD createCard(int value, int suit) {
 	CARD newCard;
 	newCard.value = value;
 	newCard.suit = suit;
+	newCard.aceCheck = 0;
 
 	switch (value) {
 		case 0:

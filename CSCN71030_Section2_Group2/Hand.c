@@ -45,46 +45,46 @@ int addDealer() {
 	int valueDealer = 0;
 	for (int i = 0; i < HAND_ARRAY_LENGTH; i++) {
 		if (hand[i][0].value == 11 || hand[i][0].value == 12 || hand[i][0].value == 13) {
-			value = value + 10;
+			valueDealer = valueDealer + 10;
 		}
 		else {
-			value = value + hand[i][0].value;
+			valueDealer = valueDealer + hand[i][0].value;
 		}
 	}
 
 	for (int i = 0; i < HAND_ARRAY_LENGTH; i++) {
-		if (hand[i][0].value == 1 && hand[i][0].aceCheck == 0 && value + 10 <= 21) {
+		if (hand[i][0].value == 1 && hand[i][0].aceCheck == 0 && valueDealer + 10 <= 21) {
 			hand[i][0].aceCheck = 1;
-			value = value + 10;
+			valueDealer = valueDealer + 10;
 		}
-		if (hand[i][0].value == 1 && hand[i][0].aceCheck == 1 && value > 21) {
+		if (hand[i][0].value == 1 && hand[i][0].aceCheck == 1 && valueDealer > 21) {
 			hand[i][0].aceCheck = 0;
-			value = value - 10;
+			valueDealer = valueDealer - 10;
 		}
 	}
-	return value;
+	return valueDealer;
 }
 
 int addPlayer() {
-	int value = 0;
+	int valuePlayer = 0;
 	for (int i = 0; i < HAND_ARRAY_LENGTH; i++) {
 		if (hand[i][1].value == 11 || hand[i][1].value == 12 || hand[i][1].value == 13){
-			value = value + 10;
+			valuePlayer = valuePlayer + 10;
 		}
 		else {
-			value = value + hand[i][1].value;
+			valuePlayer = valuePlayer + hand[i][1].value;
 		}
 	}
 
 	for (int i = 0; i < HAND_ARRAY_LENGTH; i++) {
-		if (hand[i][1].value == 1 && hand[i][1].aceCheck == 0 && value + 10 <= 21) {
+		if (hand[i][1].value == 1 && hand[i][1].aceCheck == 0 && valuePlayer + 10 <= 21) {
 			hand[i][1].aceCheck = 1;
-			value = value + 10;
+			valuePlayer = valuePlayer + 10;
 		}
-		if (hand[i][1].value == 1 && hand[i][1].aceCheck == 1 && value > 21) {
+		if (hand[i][1].value == 1 && hand[i][1].aceCheck == 1 && valuePlayer > 21) {
 			hand[i][1].aceCheck = 0;
-			value = value - 10;
+			valuePlayer = valuePlayer - 10;
 		}
 	}
-	return value;
+	return valuePlayer;
 }
