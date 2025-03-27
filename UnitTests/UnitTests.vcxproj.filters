@@ -18,25 +18,25 @@
     <ClCompile Include="UnitTests.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\CSCN71030_Section2_Group2\ResolvingGame.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\CSCN71030_Section2_Group2\Bet.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\CSCN71030_Section2_Group2\Card.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\CSCN71030_Section2_Group2\Deck.c">
+    <ClCompile Include="..\CSCN71030_Section2_Group2\Dealer.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\CSCN71030_Section2_Group2\Dealer.c">
+    <ClCompile Include="..\CSCN71030_Section2_Group2\Deck.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\CSCN71030_Section2_Group2\Hand.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\CSCN71030_Section2_Group2\Player.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CSCN71030_Section2_Group2\ResolvingGame.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

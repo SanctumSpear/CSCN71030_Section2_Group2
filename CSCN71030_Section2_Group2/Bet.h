@@ -12,4 +12,4 @@ int betLoss(int bet);
 
 int betWon(int bet);
 
-bool returnBet(int bet, char* filename);
+bool returnBet(int bet, int stock, char* filename);
