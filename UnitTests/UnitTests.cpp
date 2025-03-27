@@ -2,7 +2,7 @@
 #include <stdbool.h>
 
 extern "C" {
-	#include "../CSCN71030_Section2_Group2/Bet.h"
+#include "../CSCN71030_Section2_Group2/Bet.h"
 #include "../CSCN71030_Section2_Group2/Card.h"
 #include "../CSCN71030_Section2_Group2/Deck.h"
 #include "../CSCN71030_Section2_Group2/Dealer.h"
