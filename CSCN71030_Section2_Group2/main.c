@@ -56,6 +56,10 @@ int main(void) {
 
 		printf("This is epic blackjack, type 'h' to Hit or type 's' to Stand \n");
 		while (IsPlayerTurnActive() && scanf_s(" %c", &choice, (unsigned int)sizeof(choice))) {
+			if (overTwenty(addDealer(), addPlayer())) {
+				EndPlayerTurn();
+				break;
+			}
 			switch (choice) {
 			case 'h':
 				PlayerHit(&mainDeck);
