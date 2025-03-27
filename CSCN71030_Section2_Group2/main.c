@@ -25,7 +25,24 @@ int main(void) {
 
 	char* filename = "chips.txt";
 	int stock = readChipsFile(filename);
-	printf("Chips: %d\n", stock);
+	printf("How much would you like to bet?\n");
+	bool loopBet = true;
+	while (loopBet) {
+		printf("Chips: %d\n", stock);
+		int bet;
+		scanf_s("%d", &bet);
+
+		if (bet <= stock) {
+			loopBet = false;
+		}
+		else if (bet < 0) {
+			printf("Please enter a positive integer.\n");
+		}
+		else {
+			printf("Please enter a bet that is lower than the amount of chips you have access to.\n");
+		}
+	}
+	
 	
 	StartPlayerTurn(&mainDeck);
 	

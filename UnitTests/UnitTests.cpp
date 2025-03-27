@@ -45,14 +45,14 @@ namespace UnitTests
 			DECK deck = createDeck();
 			CARD c01 = drawPlayer(&deck);
 			CARD c02 = hand[0][1];
-			Assert::AreEqual(c01, c02);
+			Assert::AreEqual(c01.value, c02.value);
 		}
 
 		TEST_METHOD(HandTest_DrawToDealer) {
 			DECK deck = createDeck();
 			CARD c01 = drawDealer(&deck);
 			CARD c02 = hand[0][0];
-			Assert::AreEqual(c01, c02);
+			Assert::AreEqual(c01.value, c02.value);
 		}
 
 		TEST_METHOD(HandTest_AddPlayerHand) {
