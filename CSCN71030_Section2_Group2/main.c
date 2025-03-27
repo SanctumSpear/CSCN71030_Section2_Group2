@@ -62,7 +62,9 @@ int main(void) {
 		} 
 		printf("The dealer has: %d\n", addDealer());
 		printf("You have: %d\n", addPlayer());
-		if (overTwenty()) {
+		int valueDealer = addDealer();
+		int valuePlayer = addPlayer();
+		if (overTwenty(valueDealer, valuePlayer) = true) {
 			EndPlayerTurn();
 		}
 	}
@@ -72,6 +74,8 @@ int main(void) {
 	}
 
 	if (!IsDealerTurnActive() && !IsPlayerTurnActive()) {
-		endResult();
+		int valueDealer = addDealer();
+		int valuePlayer = addPlayer();
+		endResult(valueDealer, valuePlayer);
 	}
 }

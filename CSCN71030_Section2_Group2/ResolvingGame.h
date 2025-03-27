@@ -2,6 +2,6 @@
 #include <stdbool.h>
 
 
-int endResult();
+int endResult(int valueDealer, int valuePlayer);
 
-bool overTwenty();
+bool overTwenty(int valueDealer, int valuePlayer);

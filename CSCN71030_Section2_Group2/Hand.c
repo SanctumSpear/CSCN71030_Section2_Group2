@@ -42,17 +42,17 @@ void printHand() {
 }
 
 int addDealer() {
-	int value = 0;
+	int valueDealer = 0;
 	for (int i = 0; i < HAND_ARRAY_LENGTH; i++) {
-		value = value + hand[i][0].value;
+		valueDealer = valueDealer + hand[i][0].value;
 	}
-	return value;
+	return valueDealer;
 }
 
 int addPlayer() {
-	int value = 0;
+	int valuePlayer = 0;
 	for (int i = 0; i < HAND_ARRAY_LENGTH; i++) {
-		value = value + hand[i][1].value;
+		valuePlayer = valuePlayer + hand[i][1].value;
 	}
-	return value;
+	return valuePlayer;
 }

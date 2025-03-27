@@ -131,4 +131,43 @@ namespace UnitTests
 			Assert::AreEqual(test, won);
 		}
 	};
+
+	TEST_CLASS(ResolvingGameCases) {
+		TEST_METHOD(RGM_01) {
+			int fakeDealerTotal = 20;
+			int fakePlayerTotal = 23;
+			bool test = overTwenty(fakeDealerTotal, fakePlayerTotal);
+			bool correct = true;
+			Assert::AreEqual(test, correct);
+		}
+		TEST_METHOD(RGM_02) {
+			int fakeDealerTotal = 7;
+			int fakePlayerTotal = 19;
+			int test = endResult(fakeDealerTotal, fakePlayerTotal);
+			int correct = 2;
+			Assert::AreEqual(test, correct);
+		}
+
+		TEST_METHOD(RGM_03) {
+			int fakeDealerTotal = 19;
+			int fakePlayerTotal = 7;
+			int test = endResult(fakeDealerTotal, fakePlayerTotal);
+			int correct = 3;
+			Assert::AreEqual(test, correct);
+		}
+		TEST_METHOD(RGM_04) {
+			int fakeDealerTotal = 19;
+			int fakePlayerTotal = 19;
+			int test = endResult(fakeDealerTotal, fakePlayerTotal);
+			int correct = 1;
+			Assert::AreEqual(test, correct);
+		}
+		TEST_METHOD(RGM_05) {
+			int fakeDealerTotal = 22;
+			int fakePlayerTotal = 22;
+			int test = endResult(fakeDealerTotal, fakePlayerTotal);
+			int correct = 2;
+			Assert::AreEqual(test, correct);
+		}
+	};
 }
