@@ -45,7 +45,7 @@ int main(void) {
 	
 	
 	StartPlayerTurn(&mainDeck);
-	
+
 	char choice = 'n';
 
 	printf("This is epic blackjack, type 'h' to Hit or type 's' to Stand \n");
@@ -59,7 +59,7 @@ int main(void) {
 			break;
 		default:
 			printf("Invalid choice\n");
-		} 
+		}
 		printf("The dealer has: %d\n", hand[0][1].value);
 		printf("You have: %d\n", addPlayer());
 		if (overTwenty()) {
@@ -67,11 +67,13 @@ int main(void) {
 		}
 	}
 
-	if (addPlayer() < 21) {
+	if (addPlayer() <= 21) {
 		StartDealerTurn(&mainDeck);
 	}
 
 	if (!IsDealerTurnActive() && !IsPlayerTurnActive()) {
 		endResult();
+	} else {
+		printf("Foop");
 	}
 }
