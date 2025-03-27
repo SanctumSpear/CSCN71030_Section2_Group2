@@ -33,6 +33,7 @@ int main(void) {
 		scanf_s("%d", &bet);
 
 		if (bet <= stock) {
+			printf("You bet %d chips\n", bet);
 			loopBet = false;
 		}
 		else if (bet < 0) {
