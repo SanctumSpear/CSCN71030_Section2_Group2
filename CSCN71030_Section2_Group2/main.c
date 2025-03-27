@@ -80,7 +80,7 @@ int main(void) {
 		if (!IsDealerTurnActive() && !IsPlayerTurnActive()) {
 			endResult(addDealer(),addPlayer());
 		}
-		printf("Enter any key to keep playing, or enter 'x' to exit");
+		printf("\nEnter any key to keep playing, or enter 'x' to exit\n");
 		scanf_s(" %c", &playChoice, (unsigned int)sizeof(playChoice));
 		if (playChoice == 'x') {
 			playAgain = false;
