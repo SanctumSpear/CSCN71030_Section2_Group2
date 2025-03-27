@@ -24,7 +24,6 @@ int main(void) {
 
 	do {
 
-
 		do {
 			printf("Welcome to blackjack. To begin, type 'Start' \n");
 		} while (scanf_s("%63s", buffer, (unsigned int)sizeof(buffer)) != 1 || strcmp(start, buffer) != 0);
@@ -39,37 +38,28 @@ int main(void) {
 			int bet;
 			scanf_s("%d", &bet);
 
-		if (bet <= stock) {
-			printf("You bet %d chips\n", bet);
-			loopBet = false;
-		}
-		else if (bet < 0) {
-			printf("Please enter a positive integer.\n");
-		}
-		else {
-			printf("Please enter a bet that is lower than the amount of chips you have access to.\n");
-		}
-	}
-	
-	
-	StartPlayerTurn(&mainDeck);
-	
-	char choice = 'n';
 			if (bet <= stock) {
+				printf("You bet %d chips\n", bet);
 				loopBet = false;
-			} else if (bet < 0) {
+			}
+			else if (bet < 0) {
 				printf("Please enter a positive integer.\n");
-			} else {
+			}
+			else {
 				printf("Please enter a bet that is lower than the amount of chips you have access to.\n");
 			}
 		}
-
+	
+	
+		StartPlayerTurn(&mainDeck);
+	
+		char choice = 'n';
 
 		StartPlayerTurn(&mainDeck);
 
 		char choice = 'n';
 		while (getchar() != '\n');
-
+	
 		printf("This is epic blackjack, type 'h' to Hit or type 's' to Stand \n");
 		while (IsPlayerTurnActive() && scanf_s(" %c", &choice, (unsigned int)sizeof(choice))) {
 			if (overTwenty(addDealer(), addPlayer())) {
@@ -91,7 +81,7 @@ int main(void) {
 			if (overTwenty(addDealer(), addPlayer())) {
 				EndPlayerTurn();
 			}
-		}
+		}	
 
 		if (addPlayer() <= 21) {
 			StartDealerTurn(&mainDeck);
