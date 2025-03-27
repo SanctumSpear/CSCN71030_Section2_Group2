@@ -97,4 +97,38 @@ namespace UnitTests
 			Assert::AreEqual(hand[1][1], blank);
 		}
 	};
+
+	TEST_CLASS(BetTests) {
+
+		TEST_METHOD(BetTest_WritingAndReadingFile) {
+			int chips = 250;
+			char* file = "chips.txt";
+			writeChipsFile(chips, file);
+			int read = readChipsFile(file);
+			Assert::AreEqual(chips, read);
+		}
+
+		TEST_METHOD(BetTest_ReturnBet) {
+			char* file = "chips.txt";
+			int chips = 100;
+			int stock = 350;
+			returnBet(chips, stock, file);
+			int read = readChipsFile(file);
+			Assert::AreEqual(read, chips + stock);
+		}
+
+		TEST_METHOD(BetTest_BetLoss) {
+			int bet = 100;
+			int test = betLoss(bet);
+			int loss = 50;
+			Assert::AreEqual(test, loss);
+		}
+
+		TEST_METHOD(BetTest_BetWon) {
+			int bet = 100;
+			int test = betWon(bet);
+			int won = 200;
+			Assert::AreEqual(test, won);
+		}
+	};
 }
