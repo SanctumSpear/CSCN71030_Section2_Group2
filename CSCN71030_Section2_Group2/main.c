@@ -50,10 +50,6 @@ int main(void) {
 			}
 		}
 	
-	
-		StartPlayerTurn(&mainDeck);
-	
-		char choice = 'n';
 
 		StartPlayerTurn(&mainDeck);
 
