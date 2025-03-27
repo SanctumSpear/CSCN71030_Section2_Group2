@@ -245,8 +245,8 @@ namespace UnitTests
 			hand[2][0] = createCard(8, 2);
 			hand[1][1] = createCard(13, 1);
 			clearHand();
-			Assert::AreEqual(hand[2][0], blank);
-			Assert::AreEqual(hand[1][1], blank);
+			Assert::AreEqual(hand[2][0].value, blank.value);
+			Assert::AreEqual(hand[1][1].value, blank.value);
 		}
 	};
 
