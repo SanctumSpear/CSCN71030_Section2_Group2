@@ -9,6 +9,7 @@
 #include "Player.h"
 #include "Dealer.h"
 #include "Hand.h"
+#include "Bet.h"
 #include "ResolvingGame.h"
 
 int main(void) {
@@ -19,9 +20,29 @@ int main(void) {
 	char buffer[64] = "0";
 	char start[] = "Start";
 	do {
-		printf("Welcome to epic blackjack.\n To begin, type 'Start' \n");
-		
+		printf("Welcome to blackjack. To begin, type 'Start' \n");
 	} while (scanf_s("%63s", buffer, (unsigned int)sizeof(buffer)) != 1 || strcmp(start, buffer) != 0);
+
+	char* filename = "chips.txt";
+	int stock = readChipsFile(filename);
+	printf("How much would you like to bet?\n");
+	bool loopBet = true;
+	while (loopBet) {
+		printf("Chips: %d\n", stock);
+		int bet;
+		scanf_s("%d", &bet);
+
+		if (bet <= stock) {
+			loopBet = false;
+		}
+		else if (bet < 0) {
+			printf("Please enter a positive integer.\n");
+		}
+		else {
+			printf("Please enter a bet that is lower than the amount of chips you have access to.\n");
+		}
+	}
+	
 	
 	StartPlayerTurn(&mainDeck);
 	
