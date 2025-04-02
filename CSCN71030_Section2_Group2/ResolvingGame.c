@@ -25,11 +25,11 @@ int endResult(int valueDealer, int valuePlayer) {
 		printf("DRAW");
 		endResult = 1;
 	}
-	if (dealerTotal < 21 && playerTotal < 21 && dealerTotal < playerTotal) {
+	if (dealerTotal < 21 && playerTotal <= 21 && dealerTotal < playerTotal) {
 		printf("WIN");
 		endResult = 2;
 	}
-	if (dealerTotal > 21 && playerTotal < 21) {
+	if (dealerTotal > 21 && playerTotal <= 21) {
 		printf("WIN");
 		endResult = 2;
 	}
