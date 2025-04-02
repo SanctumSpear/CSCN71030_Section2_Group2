@@ -49,7 +49,7 @@ int makeBet(int stock) {
 }
 
 int betLoss(int bet) {
-	int loss = bet / 2;
+	int loss = 0;
 	return loss;
 }
 
