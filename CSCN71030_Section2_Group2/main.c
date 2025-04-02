@@ -32,14 +32,15 @@ int main(void) {
 		int stock = readChipsFile(filename);
 
 		printf("How much would you like to bet?\n");
+		int bet;
 		bool loopBet = true;
 		while (loopBet) {
 			printf("Chips: %d\n", stock);
-			int bet;
 			scanf_s("%d", &bet);
 
 			if (bet <= stock) {
 				printf("You bet %d chips\n", bet);
+				stock = stock - bet;
 				loopBet = false;
 			}
 			else if (bet < 0) {
@@ -84,7 +85,18 @@ int main(void) {
 		}
 
 		if (!IsDealerTurnActive() && !IsPlayerTurnActive()) {
-			endResult(addDealer(),addPlayer());
+			int result = endResult(addDealer(),addPlayer());
+			if (result == 1) {
+				returnBet(bet, stock, filename);
+			}
+			else if (result == 2) {
+				int wBet = betWon(bet);
+				returnBet(wBet, stock, filename);
+			}
+			else if (result == 3) {
+				int lBet = betLoss(bet);
+				returnBet(lBet, stock, filename);
+			}
 		}
 		printf("\nEnter any key to keep playing, or enter 'x' to exit\n");
 		scanf_s(" %c", &playChoice, (unsigned int)sizeof(playChoice));
