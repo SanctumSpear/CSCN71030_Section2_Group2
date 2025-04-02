@@ -7,7 +7,7 @@ bool dealerTurnActive = false;
 
 void StartDealerTurn(DECK* mainDeck) {
 	printf("\nThe dealers second dealt card is: ");
-	printCard(hand[1][1]);
+	printCard(hand[1][0]);
 	printf("\n");
 	printf("He now has a hand value of %d\n", addDealer());
 	dealerTurnActive = true;
