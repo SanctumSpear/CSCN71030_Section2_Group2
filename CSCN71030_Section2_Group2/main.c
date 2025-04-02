@@ -12,7 +12,7 @@
 #include "Bet.h"
 #include "ResolvingGame.h"
 
-int main(void) {
+int main(int argc, char* argv[]) {
 	srand(time(NULL));
 
 	DECK mainDeck = createDeck();
@@ -21,6 +21,8 @@ int main(void) {
 	char start[] = "Start";
 	char playChoice;
 	bool playAgain = true;
+	char* filename = "chips.txt";
+	int stock;
 
 	do {
 
@@ -28,8 +30,14 @@ int main(void) {
 			printf("Welcome to blackjack. To begin, type 'Start' \n");
 		} while (scanf_s("%63s", buffer, (unsigned int)sizeof(buffer)) != 1 || strcmp(start, buffer) != 0);
 
-		char* filename = "chips.txt";
-		int stock = readChipsFile(filename);
+		int args = atoi(argv[1]);
+		
+		if (args == 1) {
+			stock = readChipsFile(filename);
+		} else {
+			stock = 100;
+			returnBet(0, stock, filename);
+		}
 
 		printf("How much would you like to bet?\n");
 		int bet;
