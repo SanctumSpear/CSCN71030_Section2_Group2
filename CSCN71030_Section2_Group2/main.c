@@ -106,6 +106,9 @@ int main(int argc, char* argv[]) {
 				returnBet(lBet, stock, filename);
 			}
 		}
+
+		printf("\nYou currently have %d chips\n", stock);
+
 		printf("\nEnter any key to keep playing, or enter 'x' to exit\n");
 		scanf_s(" %c", &playChoice, (unsigned int)sizeof(playChoice));
 		if (playChoice == 'x') {
