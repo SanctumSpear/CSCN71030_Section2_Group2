@@ -81,7 +81,7 @@ int main(int argc, char* argv[]) {
 			default:
 				printf("Invalid choice\n");
 			}
-			printf("The dealer has: %d\n", hand[0][1].value);
+			printf("The dealer has: %d\n", hand[0][0].value);
 			printf("You have: %d\n", addPlayer());
 			if (overTwenty(addDealer(), addPlayer())) {
 				EndPlayerTurn();
