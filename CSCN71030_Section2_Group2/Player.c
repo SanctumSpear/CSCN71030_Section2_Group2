@@ -19,7 +19,7 @@ void StartPlayerTurn(DECK* mainDeck) {
 	printf("Your current hand value is %d\n\n", addPlayer());
 
 	printf("The dealers first dealt card is: ");
-	printCard(hand[0][1]);
+	printCard(hand[0][0]);
 	printf("\n\n");
 }
 

@@ -145,6 +145,9 @@
     <ClInclude Include="Player.h" />
     <ClInclude Include="ResolvingGame.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="chips.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
