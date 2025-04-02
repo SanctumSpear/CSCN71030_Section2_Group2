@@ -103,5 +103,6 @@ int main(void) {
 		if (playChoice == 'x') {
 			playAgain = false;
 		}
+		clearHand();
 	} while (playAgain);
 }
